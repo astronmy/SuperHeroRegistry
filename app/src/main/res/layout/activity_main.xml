@@ -1,98 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
     <data></data>
-<RelativeLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        tools:src="@tools:sample/avatars"
-        android:src="@android:drawable/ic_menu_camera"
-        android:id="@+id/ivAvatar" />
-
-    <EditText
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/etSuperHeroName"
-        android:layout_toEndOf="@+id/ivAvatar"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_alignTop="@+id/ivAvatar"
-        android:hint="@string/app_hint_sh"/>
+        tools:context=".MainActivity">
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/app_btn_save"
+            android:layout_marginStart="16dp" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/etSuperheroAlter"
-        android:layout_toEndOf="@+id/ivAvatar"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_alignBottom="@+id/ivAvatar"
-        android:hint="@string/app_hint_alter"/>
+            <RelativeLayout
 
-    <View
-        android:id="@+id/vLine"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/ivAvatar"
-        android:layout_marginTop="16dp"
-        android:background="@color/black" />
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvBio"
-        android:layout_below="@+id/vLine"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:text="@string/app_tv_bio"
-        android:textAlignment="center" />
+                <ImageView
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    tools:src="@tools:sample/avatars"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:id="@+id/ivAvatar" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/etSuperheroBio"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/tvBio"
-        android:hint="@string/app_hint_bio"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etSuperHeroName"
+                    android:layout_toEndOf="@+id/ivAvatar"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_alignTop="@+id/ivAvatar"
+                    android:hint="@string/app_hint_sh"/>
 
-    <TextView
-        android:id="@+id/tvPower"
-        android:layout_below="@+id/etSuperheroBio"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:text="@string/app_tv_power"
-        android:textAlignment="center" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etSuperheroAlter"
+                    android:layout_toEndOf="@+id/ivAvatar"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_alignBottom="@+id/ivAvatar"
+                    android:hint="@string/app_hint_alter"/>
 
-    <androidx.appcompat.widget.AppCompatRatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvPower"
-        android:layout_marginTop="16dp"
-        android:id="@+id/rbRaiting"
-        android:progressTint="@color/yellow"
-        android:layout_centerHorizontal="true"
-        />
+                <View
+                    android:id="@+id/vLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/ivAvatar"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/black" />
 
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_alignParentBottom="true"
-        android:text="@string/app_btn_save"
-        android:layout_marginStart="16dp" />
+                <TextView
+                    android:id="@+id/tvBio"
+                    android:layout_below="@+id/vLine"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="@string/app_tv_bio"
+                    android:textAlignment="center" />
 
-</RelativeLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etSuperheroBio"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@id/tvBio"
+                    android:hint="@string/app_hint_bio"/>
+
+                <TextView
+                    android:id="@+id/tvPower"
+                    android:layout_below="@+id/etSuperheroBio"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="@string/app_tv_power"
+                    android:textAlignment="center" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvPower"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/rbRaiting"
+                    android:progressTint="@color/yellow"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
 </layout>
