@@ -6,7 +6,8 @@ This application is based on a superhero registration form
 
 It is a simple form that registers the personal data of a superhero from her name to her rank of power
 
-#Registro de Superheroes
+---------------------------------------------------------------------------------------------------------------------
+# Registro de Superheroes
 
 ## Segunda aplicacion del Curso de Udemy Aprende Creando Apps
 
