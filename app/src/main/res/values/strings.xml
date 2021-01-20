@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SuperHero Registry</string>
+    <string name="app_btn_save">Save</string>
+    <string name="app_tv_bio">Bio</string>
+    <string name="app_tv_power">Power</string>
+    <string name="app_hint_sh">Superhero Name</string>
+    <string name="app_hint_alter">Alter</string>
+    <string name="app_hint_bio">Biography</string>
+</resources>

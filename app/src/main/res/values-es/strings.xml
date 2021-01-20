@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Registro de SuperHeroes</string>
+    <string name="app_btn_save">Guardar</string>
+    <string name="app_tv_bio">Bio</string>
+    <string name="app_tv_power">Poder</string>
+    <string name="app_hint_sh">Nombre del SuperHeroe</string>
+    <string name="app_hint_alter">Alter Ego</string>
+    <string name="app_hint_bio">Biografía</string>
+</resources>
