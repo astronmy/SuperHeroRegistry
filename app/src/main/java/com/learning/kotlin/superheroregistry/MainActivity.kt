@@ -18,17 +18,16 @@ class MainActivity : AppCompatActivity() {
             val alterEgo = binding.etSuperheroAlter.text.toString()
             val bio = binding.etSuperheroBio.text.toString()
             val power = binding.rbRaiting.rating
-            openDetail(heroName,alterEgo,bio, power)
+
+            val hero = Superhero(heroName,alterEgo,bio,power)
+            openDetail(hero)
         }
 
     }
 
-    private fun openDetail(heroName:String, alterEgo:String, bio:String, power:Float) {
+    private fun openDetail(hero:Superhero) {
         val intent = Intent(this,SecondActivity::class.java)
-        intent.putExtra("heroName", heroName)
-        intent.putExtra("alterEgo", alterEgo)
-        intent.putExtra("bio", bio)
-        intent.putExtra("power", power)
+        intent.putExtra(SecondActivity.HERO_KEY, hero)
         startActivity(intent)
     }
 }

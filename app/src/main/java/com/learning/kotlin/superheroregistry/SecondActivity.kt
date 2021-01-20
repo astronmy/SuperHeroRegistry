@@ -7,10 +7,7 @@ import com.learning.kotlin.superheroregistry.databinding.ActivitySecondBinding
 class SecondActivity : AppCompatActivity() {
     lateinit var binding:ActivitySecondBinding
     companion object{
-        const val HERO_NAME = "heroName"
-        const val HERO_ALTER = "alterEgo"
-        const val HERO_BIO = "bio"
-        const val HERO_POWER = "power"
+        const val HERO_KEY = "hero"
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,11 +18,8 @@ class SecondActivity : AppCompatActivity() {
     }
 
     private fun loadDetail(data:Bundle) {
-        binding.heroName.text = data.getString(HERO_NAME) ?: ""
-        binding.alterHeo.text = data.getString(HERO_ALTER) ?: ""
-        binding.shortBio.text = data.getString(HERO_BIO) ?: ""
-        binding.powerBar.rating = (data.getFloat(HERO_POWER))
-
+        val hero = data.getParcelable<Superhero>(HERO_KEY)!!
+        binding.hero = hero
     }
 
 }
